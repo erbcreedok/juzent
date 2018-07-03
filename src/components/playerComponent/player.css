@@ -1,0 +1,85 @@
+.player-container {
+    height: 100px;
+    background: #ffffff;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
+    overflow: hidden;
+}
+
+.player-title {
+    white-space: nowrap;
+}
+@media (max-width: 768.99px) {
+    .player-title {
+        margin-right: -15px;
+    }
+}
+.player-controls[disabled] {
+    pointer-events: none;
+    color: #000;
+    opacity: 0.3;
+}
+.player-controls span {
+    cursor: pointer;
+    transition: 150ms;
+}
+.player-controls span:hover {
+    color: #DC0C0C;
+}
+.player-controls span[disabled] {
+    color: #000;
+    opacity: .3;
+    pointer-events: none;
+}
+.progress-line-container {
+    position: relative;
+    margin-top: .5rem;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.progress-line-bg, .rangeslider {
+    position: relative;
+    -ms-touch-action: none;
+    touch-action: none;
+    height: 3px;
+    background: #8e949a4d;
+    cursor: pointer;
+}
+.rangeslider__fill {
+    display: block;
+}
+.progress-line {
+    height: 3px;
+    background: #DC0C0C;
+    width: 0;
+    position: absolute;
+    top: 0;
+}
+.progress-line .progress-circle, .rangeslider .rangeslider__handle {
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1.5px solid #DC0C0C;
+    background: white;
+}
+.rangeslider-horizontal {
+    height: 3px;
+}
+.rangeslider-horizontal .rangeslider__fill {
+    height: 100%;
+    background: #DC0C0C;
+    top: 0;
+}
+.rangeslider-horizontal .rangeslider__handle {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}

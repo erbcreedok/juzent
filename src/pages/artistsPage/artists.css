@@ -1,0 +1,134 @@
+.artists-page section {
+    overflow-y: hidden;
+    position: relative;
+    perspective: 1px;
+}
+.artists-page .artists-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: translateZ(-2px) scale(2);
+    transform-origin: bottom left;
+}
+.artists-page .artists-bg-image2 {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 50%;
+    background-position: center right;
+    background-repeat: no-repeat;
+
+}
+.artists-list .artist-item {
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    background-color: #151515;
+    color: white;
+    border-radius: 4px;
+    padding: 0 15px;
+    max-width: 440px;
+    margin: -20px auto;
+    transform: scale(0.6) translateX(60px);
+    transform-origin: left;
+    opacity: 0.4;
+    transition: 500ms ease-in-out;
+}
+.artists-list .slick-current .artist-item {
+    z-index: 2;
+}
+.artists-list .artist-item .image-container {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0;
+    position: relative;
+}
+.artists-list .artist-item:hover {
+    opacity: 0.8;
+}
+.artists-list .artist-item.active, .artists-list .slick-current .artist-item {
+    cursor: default;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.artists-list .slick-prev, .artists-list .slick-next {
+    right: -20px;
+    left: auto;
+    height: 32px;
+    z-index: 100;
+}
+.artists-list .slick-prev {
+    margin-top: -57px;
+}
+.artists-list .slick-next {
+    margin-bottom: -57px;
+}
+.artists-list .slick-prev:before {
+    content: '\e926';
+    font-family: 'icomoon' !important;
+    color: black;
+    font-size: 3.2rem;
+    line-height: 1;
+}
+.artists-list .slick-next:before {
+    content: '\e906';
+    font-family: 'icomoon' !important;
+    color: black;
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 991.98px) {
+    .artists-jumbotron {
+        margin-top: 110px;
+        margin-bottom: 50px;
+    }
+    .artists-list.full-view {
+        height: auto;
+        min-height: 0;
+    }
+    .artists-list .artist-item {
+        width: 200px;
+        height: 350px;
+        transition: all 300ms;
+        padding: 5px 10px;
+        margin: 0 -15px 100px;
+    }
+    .artists-list .slick-list {
+        height: 450px;
+        overflow-y: hidden;
+    }
+    .artists-list .artist-item .image-container {
+        width: 160px;
+        height: 160px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .artists-list .artist-item .artist-photo {
+        margin-bottom: 40px;
+    }
+    .artists-list .slick-prev, .artists-list .slick-next {
+        left: 50%;
+        left: calc(50% + 18px);
+        bottom: 40px;
+        top: auto;
+        height: 32px;
+        z-index: 100;
+        transform: rotate(-90deg);
+    }
+    .artists-list .slick-prev {
+        margin: 0 0 0 -57px;
+    }
+    .artists-list .slick-next {
+        margin: 0 -57px 0 0;
+    }
+}

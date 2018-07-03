@@ -1,0 +1,30 @@
+.language-button {
+    position: relative;
+}
+.language-button .round-button {
+    position: relative;
+    z-index: 2;
+}
+
+.language-button.opened .round-button.unselected{
+    box-shadow: rgba(113, 113, 113, .3) 0 0 0 5px;
+}
+.language-button .round-button:nth-child(2), .language-button .round-button:nth-child(3) {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #717171;
+    box-shadow: rgba(113, 113, 113, 0) 0 0 0 0;
+    transition: 300ms;
+}
+.language-button.opened .round-button:nth-child(2):hover, .language-button.opened .round-button:nth-child(3):hover {
+    background-color: #DC0C0C;
+    box-shadow: 0 0 0 5px rgba(220, 12, 12, .3);
+}
+.language-button.opened .round-button:nth-child(2){
+    top: 60px
+}
+.language-button.opened .round-button:nth-child(3){
+    top: 120px;
+}

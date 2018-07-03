@@ -1,0 +1,58 @@
+.all-artists-list .slick-prev:before {
+    content: '\e926';
+    font-family: 'icomoon' !important;
+    color: black;
+    font-size: 3.2rem;
+    line-height: 1;
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+.all-artists-list .slick-next:before {
+    content: '\e906';
+    font-family: 'icomoon' !important;
+    color: black;
+    font-size: 3.2rem;
+    line-height: 1;
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+.all-artists-list .artists-avatar {
+    min-height: 400px;
+    max-height: 430px;
+    position: relative;
+}
+.all-artists-list .artists-avatar:after {
+    content: '';position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    background: rgba(0,0,0,0);
+    transition: .3s;
+}
+.all-artists-list .artists-avatar .artists-avatar-text {
+    opacity: 0;
+    top:0;left:0;right:0;bottom:0;margin:auto;
+    color:#fff;
+    display: inline-block;
+    text-align: center;
+    height: 20px;
+    font-size: 4rem;
+    position: absolute;
+    z-index: 2;
+    transition: .3s;
+}
+.all-artists-list .artists-avatar:hover:after {
+    background: rgba(0,0,0,.5);
+}
+.all-artists-list .artists-avatar:hover .artists-avatar-text {
+    opacity: 1;
+}
+.all-artists-list .all-artists-item:hover .all-artists-item-name {
+    text-decoration: underline;
+}
+.all-artists-list .all-artists-item:hover .all-artists-item-description {
+    text-decoration: underline;
+}
+@media (max-width: 992px) {
+    .all-artists-list .artists-avatar {
+        min-height: 100px;
+    }
+}

@@ -1,0 +1,11 @@
+.modal .iframe-modal.modal-dialog {
+    width: auto;
+    max-width: 900px;
+    height: 600px;
+}
+.modal .iframe-modal.modal-dialog .modal-content {
+    height: 100%;
+}
+.modal .iframe-modal.modal-dialog .modal-content iframe {
+    height: 580px;
+}

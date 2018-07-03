@@ -1,0 +1,53 @@
+.equalizer-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transform: scale(0.4);
+    transform-origin: left;
+}
+
+.equalizer-icon .equalizer-icon-column {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background: #DC0C0C;
+    bottom: 0;
+    left:0;
+    transition: height 300ms;
+}
+.equalizer-icon .equalizer-icon-column.equalizer-column-1 {  left: 0;    height: 70%; animation: animate-equalizer-stop-1 1s forwards;}
+.equalizer-icon .equalizer-icon-column.equalizer-column-2 {  left: 12.5%;height: 20%; animation: animate-equalizer-stop-1 1s forwards;}
+.equalizer-icon .equalizer-icon-column.equalizer-column-3 {  left: 25%;  height: 80%; animation: animate-equalizer-stop-1 1s forwards;}
+.equalizer-icon .equalizer-icon-column.equalizer-column-4 {  left: 37.5%;height: 100%;animation: animate-equalizer-stop-1 1s forwards;}
+.equalizer-icon .equalizer-icon-column.equalizer-column-5 {  left: 50%;  height: 75%; animation: animate-equalizer-stop-1 1s forwards;}
+.equalizer-icon .equalizer-icon-column.equalizer-column-6 {  left: 62.5%;height: 80%; animation: animate-equalizer-stop-1 1s forwards;}
+.equalizer-icon .equalizer-icon-column.equalizer-column-7 {  left: 75%;  height: 70%; animation: animate-equalizer-stop-1 1s forwards;}
+.equalizer-icon .equalizer-icon-column.equalizer-column-8 {  left: 87.5%;height: 40%; animation: animate-equalizer-stop-1 1s forwards;}
+
+.equalizer-animate.equalizer-icon .equalizer-icon-column.equalizer-column-1 {  left: 0;       animation: animate-equalizer-1 .7s infinite both;}
+.equalizer-animate.equalizer-icon .equalizer-icon-column.equalizer-column-2 {  left: 12.5%;   animation: animate-equalizer-2 .5s infinite both;}
+.equalizer-animate.equalizer-icon .equalizer-icon-column.equalizer-column-3 {  left: 25%;     animation: animate-equalizer-3 .8s infinite both;}
+.equalizer-animate.equalizer-icon .equalizer-icon-column.equalizer-column-4 {  left: 37.5%;   animation: animate-equalizer-4 .6s infinite both;}
+.equalizer-animate.equalizer-icon .equalizer-icon-column.equalizer-column-5 {  left: 50%;     animation: animate-equalizer-5 .9s infinite both;}
+.equalizer-animate.equalizer-icon .equalizer-icon-column.equalizer-column-6 {  left: 62.5%;   animation: animate-equalizer-6 .7s infinite both;}
+.equalizer-animate.equalizer-icon .equalizer-icon-column.equalizer-column-7 {  left: 75%;     animation: animate-equalizer-7 .6s infinite both;}
+.equalizer-animate.equalizer-icon .equalizer-icon-column.equalizer-column-8 {  left: 87.5%;   animation: animate-equalizer-8 .9s infinite both;}
+
+
+@keyframes animate-equalizer-1 { 0% { height: 70% } 25% { height: 40%} 50% {height: 60%} 75% {  height: 30% } 100% {height: 80%} }
+@keyframes animate-equalizer-2 { 0% { height: 20% } 25% { height: 60%} 50% {height: 20%} 75% {  height: 100% } 100% {height: 20%} }
+@keyframes animate-equalizer-3 { 0% { height: 80% } 25% { height: 40%} 50% {height: 70%} 75% {  height: 20% } 100% {height: 80%} }
+@keyframes animate-equalizer-4 { 0% { height: 100% }25% { height: 70%} 50% {height: 80%} 75% {  height: 40% } 100% {height: 60%} }
+@keyframes animate-equalizer-5 { 0% { height: 75% } 25% { height: 100%}50% {height: 70%} 75% {  height: 80% } 100% {height: 50%} }
+@keyframes animate-equalizer-6 { 0% { height: 80% } 25% { height: 34%} 50% {height: 90%} 75% {  height: 60% } 100% {height: 80%} }
+@keyframes animate-equalizer-7 { 0% { height: 70% } 25% { height: 45%} 50% {height: 100%}75% {  height: 50% } 100% {height: 70%} }
+@keyframes animate-equalizer-8 { 0% { height: 40% } 25% { height: 90%} 50% {height: 30%} 75% {  height: 70% } 100% {height: 40%} }
+
+@keyframes animate-equalizer-stop-1 { 0% { height: 70% } 100% {height: 10%} }
+@keyframes animate-equalizer-stop-2 { 0% { height: 20% } 100% {height: 10%} }
+@keyframes animate-equalizer-stop-3 { 0% { height: 80% } 100% {height: 10%} }
+@keyframes animate-equalizer-stop-4 { 0% { height: 100%} 100% {height: 10%} }
+@keyframes animate-equalizer-stop-5 { 0% { height: 75% } 100% {height: 10%} }
+@keyframes animate-equalizer-stop-6 { 0% { height: 80% } 100% {height: 10%} }
+@keyframes animate-equalizer-stop-7 { 0% { height: 70% } 100% {height: 10%} }
+@keyframes animate-equalizer-stop-8 { 0% { height: 40% } 100% {height: 10%} }

@@ -1,0 +1,43 @@
+.news-page .bg-image{
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+}
+.date-container {
+    border-top: 2px solid #DC0C0C;
+    padding-top: 10px;
+    margin-right: 20px;
+    width: 55px;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    text-align: center;
+}
+.date-container .date-day {
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: bold;
+}
+@media (max-width: 767.98px) {
+    .news-page .bg-image{
+        height: 250px;
+    }
+    .date-container {
+        position: static;
+        border-top: none;
+        border-left: 2px solid #DC0C0C;
+        padding-left: 10px;
+        padding-top: 0;
+        width: auto;
+        text-align: left;
+        height: 20px;
+        margin: 10px 0;
+    }
+    .date-container .date-day, .date-container .date-month{
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: normal;
+        opacity: .5;
+        margin-right: 3px;
+    }
+}

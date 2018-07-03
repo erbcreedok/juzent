@@ -1,0 +1,23 @@
+.social-links {
+    display: inline-block;
+}
+.social-links a {
+    font-size: 1.6rem;
+    color: #ffffff;
+    line-height: 1.8rem;
+    display: inline-block;
+    margin-right: 25px;
+}
+.social-links a:last-child {
+    margin-right: 0;
+}
+.social-links a:hover {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+.social-links.dark a {
+    color: #000000;
+}
+.social-links.dark a:hover {
+    color: #444444;
+}

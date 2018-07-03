@@ -1,0 +1,452 @@
+html {
+  font-size: 10px;
+  min-width: 376px;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+h1, .h1 {
+  font-size: 4rem;
+  @media (max-width: 768.98px) {
+    font-size: 2.4rem;
+  }
+}
+h2, .h2 {
+  font-size: 3rem;
+  @media (max-width: 768.98px) {
+    font-size: 1.8rem;
+  }
+}
+h3, .h3 {
+  font-size: 2.6rem;
+}
+h4, .h4 {
+  font-size: 2rem;
+}
+p, .p {
+  font-size: 1.6rem;
+}
+.big {
+  font-size: 1.8rem;
+}
+.normal {
+  font-size: 1.4rem;
+}
+.small {
+  font-size: 1.2rem;
+}
+.font-10 {
+  font-size: 1rem;
+}
+.font-24 {
+  font-size: 2.4rem;
+}
+.a-inherit {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+    opacity: .9;
+  }
+  &.no-underline-hover:hover {
+    text-decoration: none;
+  }
+  &.low-opacity-hover:hover {
+    opacity: .7;
+  }
+}
+
+.o-0 {
+  opacity: 0;
+}
+.o-25 {
+  opacity: .25;
+}
+.o-50 {
+  opacity: .5;
+}
+.o-75 {
+  opacity: .75;
+}
+.o-100 {
+  opacity: 1;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+blockquote {
+  padding-left: 50px;
+  border-left: 3px solid $red;
+  font-style: italic;
+  font-weight: bold;
+  color: rgba(0,0,0,.5);
+  font-size: 1.6rem;
+}
+
+.btn {
+  height: 40px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  padding-left: 24px;
+  padding-right: 24px;
+  cursor: pointer;
+  &.btn-small {
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  &.btn-primary {
+    background: none;
+    border: 1.5px solid $black;
+    color: $black;
+    transition: 300ms;
+    &:hover {
+      background: $black;
+      color: $white;
+    }
+  }
+  &.btn-secondary {
+    background: none;
+    border: 1.5px solid $white;
+    color: $white;
+  }
+  &.btn-danger {
+    color: $white;
+    background-color: $red;
+    border-color: $red;
+  }
+  &.btn-light {
+    color: $red;
+    background-color: $white;
+    border-color: $white;
+  }
+  &.btn-shadow {
+    box-shadow: 0 2px 15px rgba(0,0,0,.15);
+  }
+}
+.round-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  padding: 0;
+  font-size: 1.2rem;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: $black;
+  box-shadow: rgba($black, 0.3) 0 0 0 5px;
+  &.round-button-red {
+    border: none;
+    background-color: $red;
+    box-shadow: rgba($red, 0.3) 0 0 0 5px;
+  }
+}
+
+.full-view {
+  min-height: 100vh;
+}
+.bg-pink-gradient {
+  background: linear-gradient(45deg, rgb(255, 154, 158) 0%, rgb(250, 208, 196) 99%, rgb(250, 208, 196) 100%);
+}
+.bg-gray {
+  background-color: $gray;
+}
+.bg-dark-gray {
+  background-color: $dark-gray;
+}
+.bg-black {
+  background-color: $black-default;
+}
+.color-white {
+  color: $white;
+}
+.color-red {
+  color: $red;
+}
+a.no-style {
+  color: inherit;
+  text-decoration: none;
+}
+a.red-href {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: $red;
+    text-decoration: underline;
+  }
+}
+.py-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.py-70 {
+  padding-top: 70px !important;
+  padding-bottom: 70px !important;
+}
+.py-85 {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+.py-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.py-155 {
+  padding-top: 155px;
+  padding-bottom: 155px;
+}
+.px-50 {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+.px-75 {
+  padding-left: 75px !important;
+  padding-right: 75px !important;
+}
+.px-100 {
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+@media (min-width: 768px) {
+  .py-md-155 {
+    padding-top: 155px;
+    padding-bottom: 155px;
+  }
+  .px-md-50 {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  .px-md-75 {
+    padding-left: 75px !important;
+    padding-right: 75px !important;
+  }
+  .px-md-100 {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+}
+@media (min-width: 992px) {
+  .pt-lg-150 {
+    padding-top: 150px !important;
+  }
+  .pb-lg-70 {
+    padding-bottom: 70px !important;
+  }
+  .py-lg-70 {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+  .py-lg-100 {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+.mt-50 {
+  margin-top: 50px !important;
+}
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+.mb-70 {
+  margin-bottom: 70px !important;
+}
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+.my-50 {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+@media (min-width: 768px) {
+  .mt-md-20 {
+    margin-top: 20px !important;
+  }
+  .mt-md-50 {
+    margin-top: 50px !important;
+  }
+  .mb-md-20 {
+    margin-bottom: 20px !important;
+  }
+  .mb-md-40 {
+    margin-bottom: 40px !important;
+  }
+  .mb-md-50 {
+    margin-bottom: 50px !important;
+  }
+  .mb-md-70 {
+    margin-bottom: 70px !important;
+  }
+  .mb-md-80 {
+    margin-bottom: 80px !important;
+  }
+}
+.mr-50 {
+  margin-right: 50px !important;
+}
+.bg-lined {
+  background-image: url("../img/line-dark.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 200px 1px;
+  &.bg-black {
+    background-image: url("../img/line.png");
+  }
+}
+.bg-dot {
+  background-image: url("../img/dot.png");
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.table-tours {
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 690px;
+  background: none;
+  tr {
+    background-color: rgba($white, .25);
+  }
+  tr:nth-child(2n) {
+    background-color: rgba($black, .25);
+  }
+  tr td:first-child {
+    padding-left: 30px;
+  }
+  tr td:last-child {
+    padding-right: 30px;
+  }
+  tr button {
+    opacity: .5;
+    transition: 400ms;
+  }
+  tr:hover button {
+    opacity: 1;
+  }
+}
+
+.image-container {
+  overflow: hidden;
+  position: relative;
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
+  &.minify-image img{
+    width: 1px;
+    min-width: 100%;
+    min-height: 0;
+    max-width: none;
+    max-height: none;
+    height: auto;
+  }
+  &.image-square {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+    position: relative;
+    img {
+      position: absolute;
+      top:0;
+      left:0;
+    }
+    .bg-image {
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+    }
+  }
+}
+.image-rounded {
+  border-radius: 5px;
+  overflow: hidden;
+  &.image-small {
+    border-radius: 2px;
+  }
+}
+.image-shadow {
+  box-shadow:  10px 10px 30px rgba(0,0,0,.3);
+  &.image-small  {
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+}
+.image-circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.modal .icon-close {
+  position: absolute;
+  color: white;
+  right: -25px;
+  text-shadow: 0 3px 15px #000;
+  cursor: pointer;
+}
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 500px;
+    margin: 8rem auto 2rem;
+  }
+}
+
+.border-rounded {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bg-gray-loading {
+  background: linear-gradient(305deg, $grayblue, $white);
+  background-size: 400% 400%;
+
+  -webkit-animation: bg-gray-loading 2s ease infinite;
+  -moz-animation: bg-gray-loading 2s ease infinite;
+  -o-animation: bg-gray-loading 2s ease infinite;
+  animation: bg-gray-loading 2s ease infinite;
+}
+.bg-image-cover {
+  background-size: cover;
+  background-position: center;
+}
+@-webkit-keyframes bg-gray-loading {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+@-moz-keyframes bg-gray-loading {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+@-o-keyframes bg-gray-loading {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+@keyframes bg-gray-loading {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
