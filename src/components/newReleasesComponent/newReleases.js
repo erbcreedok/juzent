@@ -26,7 +26,7 @@ class NewReleases extends Component {
                 album: 'Альбом'
             },
             kz: {
-                new: 'Жаңа әңдер',
+                new: 'Жаңа әндер',
                 all: 'Медиатеканы көру',
                 song: '{0} - {1}',
                 date: 'Шығу уақыты: {day} {month} {year}',
@@ -78,7 +78,7 @@ class NewReleases extends Component {
                                 {strings.genre}: <span className="font-weight-bold">{release.genre}</span> <br/>
                                 {strings.album}: <span className="font-weight-bold">«{release.album}»</span> <br/>
                             </p>
-                            <Link to="/songs">
+                            <Link to={'/songs/' + release.album_link}>
                                 <Button color="danger">
                                     <span className="text-uppercase">{strings.all}</span>
                                 </Button>

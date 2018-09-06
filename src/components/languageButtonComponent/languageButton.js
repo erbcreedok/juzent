@@ -48,19 +48,19 @@ class LanguageButton extends Component {
         const getButtons = () => {
             const mainLang = this.state.languages.find(lang => lang.code === this.props.lang);
             let i = 0;
-            let r = [<Button key={i} className="round-button round-button-red" onClick={() => {this.props.setLanguage(mainLang.code)}}>{mainLang.short}</Button>];
+            let r = [<Button key={i} className="round-button round-button-red" onClick={() => {this.props.setLanguage(mainLang.code); this.toggleOpen()}}>{mainLang.short}</Button>];
             this.state.languages.map((lang) => {
                 if (lang === mainLang) return;
                 i++;
                 r.push(
-                    <Button key={i} className="round-button round-button-red unselected" onClick={() => {this.props.setLanguage(lang.code)}}>{lang.short}</Button>
+                    <Button key={i} className="round-button round-button-red unselected" onClick={() => {this.props.setLanguage(lang.code); this.toggleOpen()}}>{lang.short}</Button>
                 )
             });
             return r;
         };
 
         return (
-            <div className={'language-button ml-auto mr-4 my-3 ' + (this.state.isOpen ? 'opened' : '')} onClick={this.toggleOpen} ref={(node) => {this.wrapperRef = node}}>
+            <div className={'language-button ml-auto mr-4 my-3 ' + (this.state.isOpen ? 'opened' : '')} ref={(node) => {this.wrapperRef = node}}>
                 {getButtons()}
             </div>
         )

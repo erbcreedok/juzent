@@ -48,8 +48,8 @@ class Footer extends Component {
                 concerts: 'Концерт',
                 contacts: 'Байланыс',
                 lastNews: 'Соңғы жаңалықтар',
-                newReleases: 'Жана релиздер',
-                closestTours: 'Жақын арадығы турлар',
+                newReleases: 'Жаңа релиздер',
+                closestTours: 'Жақын арадағы турлар',
                 music: 'Музыка',
                 videoClips: 'Бейнебаяндар',
                 contactUs: 'Бізбен хабарласу',
@@ -68,7 +68,7 @@ class Footer extends Component {
                 music: 'Music',
                 videoClips: 'Videoclips',
                 contactUs: 'Contact with us',
-                def: 'JUZ ENTERTAINMENT is a Kazakhstan record company and a talent search agency. The company was founded in 2014 by Erbolat Bedelkhan.',
+                def: 'JUZ ENTERTAINMENT is a Kazakhstan record company and a talent search agency. The company was founded in 2014 by Yerbolat Bedelkhan.',
                 months: ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
             }
         });

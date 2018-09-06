@@ -28,7 +28,7 @@ class Songs extends Component {
             if (this.props.match.params.albumId) {
                 this.props.getAlbum(this.props.match.params.albumId)
             } else {
-                this.props.getAlbum('1526969627989');
+                this.props.getAlbum('1530701456615');
             }
         }
         if (!this.props.albums) {

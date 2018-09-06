@@ -9,6 +9,7 @@ export const getTopConcerts = (lang) => dispatch => {
                 concerts.map((concert) => {
                     const timeZoneOffset = new Date(0).getHours() - new Date(0).getUTCHours();
                     concert.concert_time = new Date(new Date(concert.concert_time + 'Z') - (timeZoneOffset * 3600000));
+                    return concert;
                 });
                 dispatch({type:'FETCH_CONCERTS', payload: concerts});
             }
