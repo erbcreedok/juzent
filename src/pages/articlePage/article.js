@@ -33,13 +33,13 @@ class Article extends Component {
     render() {
         const strings = new LocalizedStrings({
             ru: {
-                months: ['', 'ЯНВ', 'ФЕВ', 'МАР', 'АПР', 'МАЙ', 'ИЮН', 'ИЮЛ', 'АВГ', 'СЕН', 'ОКТ', 'НОЯ', 'ДЕК']
+                months: ['ЯНВ', 'ФЕВ', 'МАР', 'АПР', 'МАЙ', 'ИЮН', 'ИЮЛ', 'АВГ', 'СЕН', 'ОКТ', 'НОЯ', 'ДЕК']
             },
             kz: {
-                months: ['', 'ҚАН', 'АҚП', 'НАУ', 'СӘУ', 'МАМ', 'МАУ', 'ШІЛ', 'ТАМ', 'ҚЫР', 'ҚАЗ', 'ҚАР', 'ЖЕЛ']
+                months: ['ҚАН', 'АҚП', 'НАУ', 'СӘУ', 'МАМ', 'МАУ', 'ШІЛ', 'ТАМ', 'ҚЫР', 'ҚАЗ', 'ҚАР', 'ЖЕЛ']
             },
             en:{
-                months: ['', 'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+                months: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
             }
         });
         strings.setLanguage(this.props.lang);
@@ -87,7 +87,6 @@ class Article extends Component {
                 </div>
             );
         }
-
         return (
             <div className="news-page">
                 { getTopImage() }

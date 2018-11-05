@@ -34,6 +34,7 @@ class closestTours extends Component {
                 buy: 'Купить билет',
                 item: 'Билет',
                 months: ['','январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'],
+                comingSoon: 'Скоро...'
             },
             kz: {
                 closest: 'Жақын арадағы турлар',
@@ -42,6 +43,7 @@ class closestTours extends Component {
                 buy: 'Сатып алу',
                 item: 'Билет',
                 months: ['','қантар', 'ақпан', 'наурыз', 'сәуір', 'мамыр', 'маусым', 'шілде', 'тамыз', 'қыркүйек', 'қазан', 'қараша', 'желтоқсан'],
+                comingSoon: 'Жақын арада...'
             },
             en:{
                 closest: 'Upcoming tours',
@@ -50,6 +52,7 @@ class closestTours extends Component {
                 buy: 'Buy ticket',
                 item: 'Ticket',
                 months: ['','january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
+                comingSoon: 'Coming Soon...'
             }
         });
         strings.setLanguage(this.props.lang);
@@ -118,11 +121,16 @@ class closestTours extends Component {
                     </Row>
                     <Row style={{overflowX: 'auto'}}>
                         <div className="col-12">
-                            <Table dark className="table-tours">
-                                <tbody>
-                                { getConcerts() }
-                                </tbody>
-                            </Table>
+                            {
+                                (concerts.length > 0) ?
+                                    <Table dark className="table-tours">
+                                        <tbody>
+                                        { getConcerts() }
+                                        </tbody>
+                                    </Table>
+                                    :
+                                    <h2>{strings.comingSoon}</h2>
+                            }
                         </div>
                     </Row>
                 </div>

@@ -40,6 +40,7 @@ class Footer extends Component {
                 contactUs: 'Связаться с нами',
                 def: 'JUZ ENTERTAINMENT – казахстанская звукозаписывающая компания и агентство по поиску талантов. Компания была основана в 2014 году Ерболатом Беделханом',
                 months: ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'],
+                soon: 'Скоро...',
             },
             kz: {
                 main:'Басты бет',
@@ -55,6 +56,7 @@ class Footer extends Component {
                 contactUs: 'Бізбен хабарласу',
                 def: 'JUZ ENTERTAINMENT – қазақстандық дыбыс жазу компаниясы және таланттарды іздеу агенттігі. Компанияның негізін салушы – Ерболат Беделхан.',
                 months: ['қантар', 'ақпан', 'наурыз', 'сәуір', 'мамыр', 'маусым', 'шілде', 'тамыз', 'қыркүйек', 'қазан', 'қараша', 'желтоқсан'],
+                soon: 'Жақын арада...',
             },
             en:{
                 main:'Home',
@@ -70,6 +72,7 @@ class Footer extends Component {
                 contactUs: 'Contact with us',
                 def: 'JUZ ENTERTAINMENT is a Kazakhstan record company and a talent search agency. The company was founded in 2014 by Yerbolat Bedelkhan.',
                 months: ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
+                soon: 'Soon...',
             }
         });
         strings.setLanguage(this.props.lang);
@@ -151,7 +154,12 @@ class Footer extends Component {
                                         <p className="font-weight-bold normal">
                                             <a href="http://juzent.com/tickets" target="_blank"><span className="text-uppercase">{strings.concerts}</span></a>
                                         </p>
-                                        { getConcerts() }
+                                        {
+                                            (concerts.length > 0) ?
+                                                getConcerts()
+                                                :
+                                                <a>{strings.soon}</a>
+                                        }
                                     </div>
                                 </div>
                             </div>

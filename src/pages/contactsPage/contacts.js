@@ -95,7 +95,7 @@ class Contacts extends Component {
                                             <SocialLinks
                                                 facebook="https://www.facebook.com/XCIofficial/"
                                                 youtube="https://www.youtube.com/channel/UCd3X-p_3fRLHnu8LCPOMTNg"
-                                                instagram="https://www.instagram.com/91ninetyone.kz/"
+                                                instagram="https://www.instagram.com/ninetyone/"
                                                 twitter="https://twitter.com/XCIofficial?lang=ru"
                                                 dark
                                             />

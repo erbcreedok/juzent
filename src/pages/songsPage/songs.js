@@ -51,9 +51,9 @@ class Songs extends Component {
             kz: {
                 all: 'Бәрін ойнату',
                 songCount: '{0} әуен',
-                songs: 'Танымалы әуендер',
-                albums: 'Танымалы альбомдар',
-                clips: 'Тайнымалы бейнебаяндар',
+                songs: 'Әуендер',
+                albums: 'Альбомдар',
+                clips: 'Бейнебаяндар',
                 allClips: 'Барлық бейнебаяндар',
                 allAlbums: 'Барлық альбомдар',
             },
