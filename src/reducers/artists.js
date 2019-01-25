@@ -17,6 +17,9 @@ export default function artists(state = initialState, action) {
     if (action.type === 'FETCH_ARTISTS'){
         return action.payload;
     }
+    if (action.type === 'CLEAR_ARTISTS') {
+        return {...state, artists: null, selectedArtist: null}
+    }
 
     return state;
 }

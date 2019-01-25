@@ -8,7 +8,7 @@ import VideoBlock from "../../components/videoBlockComponent/videoBlock";
 import {connect} from "react-redux";
 import {getAlbum, getAlbums} from "../../actions/albums";
 import {playerNowPlaySong, playerNowSetSong} from "../../actions/player";
-import AlbumCoverImage from "../../components/AlbumCoverImageComponent/albumCoverImage";
+import AlbumCoverImage from "../../components/albumCoverImageComponent/albumCoverImage";
 import {getMainVideos} from "../../actions/videos";
 
 class Songs extends Component {

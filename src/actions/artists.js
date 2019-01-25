@@ -17,6 +17,7 @@ export const getArtists = (id, lang) => dispatch => {
 };
 
 export const getArtist = (id, lang) => dispatch => {
+  console.log({id, lang});
     if (!id) return;
     dispatch({ type: 'FETCH_ARTISTS_ARTIST', payload: 'LOADING' });
     fs.collection('artists').doc('' + id).collection('locale').doc(lang).get()

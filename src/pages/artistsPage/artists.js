@@ -45,6 +45,7 @@ class Artists extends Component {
         if (this.props.match.params.artistId !== props.match.params.artistId || this.props.lang !== props.lang) {
             this.props.setArtist(props.match.params.artistId, props.lang);
         }
+        console.log(JSON.parse(JSON.stringify({old: this.props, props})));
         if (props.artists.artists && props.artists.artists[0] && !props.match.params.artistId && props.artists.artists && props.artists.artists!=='LOADING') {
             if (this.props.artists.group.artists.findIndex((artist) => ('' + artist ) === props.artists.artists[0].artist_id) !== -1) {
                 this.props.history.push('/artists/' + props.match.params.id + '/' + props.artists.artists[0].artist_id);
@@ -65,6 +66,7 @@ class Artists extends Component {
     }
     componentWillUnmount() {
         this.props.onUnmount();
+        this.props.clearArtists();
     }
 
     render() {
@@ -97,7 +99,15 @@ class Artists extends Component {
         strings.setLanguage(this.props.lang);
         const artists = this.props.artists.artists && this.props.artists.artists[0] ? this.props.artists.artists : undefined;
         const group = this.props.artists.group;
-        const selectedArtist = (this.props.artists.selectedArtist === 'LOADING' || group && this.props.artists.selectedArtist && this.props.artists.selectedArtist.artist_id && group.artists && group.artists.findIndex( artist => '' + artist === this.props.artists.selectedArtist.artist_id) !== -1 ) ? this.props.artists.selectedArtist : null;
+        const selectedArtist = (this.props.artists.selectedArtist === 'LOADING') ||
+        (
+          group &&
+          this.props.artists.selectedArtist &&
+          this.props.artists.selectedArtist.artist_id &&
+          group.artists &&
+          group.artists.findIndex( artist => '' + artist === this.props.artists.selectedArtist.artist_id) !== -1
+        )
+          ? this.props.artists.selectedArtist : null;
         const settings = {
             infinite: true,
             centerMode: true,
@@ -256,7 +266,7 @@ class Artists extends Component {
             }
         };
         const getArtist = () => {
-            if (!selectedArtist) return;
+            if (!selectedArtist) return <div className="container"><h2>No artist selected</h2></div>;
             else if (selectedArtist === 'LOADING') {
                 return (
                     <div>
@@ -384,15 +394,17 @@ class Artists extends Component {
                     <div className="artists-bg-image" style={{backgroundImage: uri}}/>
                     <div className="container" >
                         <div className="row align-items-center pt-lg-150 pb-lg-70">
-                            <div className="col-lg-5 artists-jumbotron">
+                            {artists && artists.length!==1 && [<div className="col-lg-5 artists-jumbotron" key="group-info">
                                 {getGroup()}
-                            </div>
-                            <div className="col-lg-7">
+                            </div>,
+                            <div className="col-lg-7 pt-lg-0" key="artist-info">
                                 {getArtists()}
-                            </div>
+                            </div>]}
                         </div>
                     </div>
-                    { getArtist() }
+                    <div className="mt-lg-0" style={{marginTop: '10rem'}}>
+                        { getArtist() }
+                    </div>
                 </section>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <span className="icon-close" onClick={this.toggle}/>
@@ -430,6 +442,9 @@ export default withRouter(connect(
         onUnmount: () => {
             dispatch({type: 'SET_STYLE', payload: 'DEFAULT'});
             dispatch({type: 'SET_OPACITY', payload: 'DEFAULT'});
+        },
+        clearArtists: () => {
+            dispatch({type: 'CLEAR_ARTISTS'})
         }
     })
 )(Artists));

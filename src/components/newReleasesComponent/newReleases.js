@@ -5,7 +5,7 @@ import album from '../../assets/img/album_icon.png';
 import {connect} from "react-redux";
 import LocalizedStrings from 'react-localization';
 import {getNewRelease} from "../../actions/news";
-import AlbumCoverImage from "../AlbumCoverImageComponent/albumCoverImage";
+import AlbumCoverImage from "../albumCoverImageComponent/albumCoverImage";
 
 class NewReleases extends Component {
 

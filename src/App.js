@@ -9,7 +9,7 @@ import Concerts from "./pages/concertsPage/concerts";
 import Artists from "./pages/artistsPage/artists";
 import Songs from "./pages/songsPage/songs";
 import Contacts from "./pages/contactsPage/contacts";
-import AudioGlobal from "./components/AudioGlobalComponent/audioGlobal";
+import AudioGlobal from "./components/audioGlobalComponent/audioGlobal";
 import AllSongs from "./pages/allSongsPage/allSongs";
 import AllAlbums from "./pages/allAlbumsPage/allAlbums";
 import AllVideos from "./pages/allVideosPage/allVideos";
